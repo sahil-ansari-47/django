@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Our Services{% endblock %}
+{% load static %}
+{% block content %}
+<section class="services">
+    <ul class="services-list">
+        {% if services_list|length == 0 %}
+            <p>No services available at the moment.</p>
+        {% else %}
+            <p>We have the following services available at the moment:</p>
+        {% endif %}
+        {% for item in services_list %}
+            <li>
+                <a href= "{% url 'my_app:service_detail' item.pk %}"><h2>{{ item.name }}</h2></a>
+                <p>{{ item.description|truncatewords:10 }}</p>
+                <p>Price: ${{ item.price }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% endblock %}

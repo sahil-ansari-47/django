@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="promotion">        
+            <img src="{% static 'images/Promotion.jpg' %}" alt="Promotion Image" class="promotion-image">
+            <h2>Special Promotion</h2>
+            <p>Get 20% off on all services<br>
+                Valid until 31st December 2021</p>
+</section>
+<section class="catalogue">
+        <h2>Our Style Catalogue</h2>
+        <img src="{% static 'images/Catalogue.jpg' %}" alt="Catalogue">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aspernatur, at fugit corrupti ducimus autem excepturi cum asperiores animi facilis optio, provident voluptate voluptatem a molestias in ipsa laboriosam. Laborum blanditiis fuga numquam ut illo perspiciatis rerum provident! Delectus, fuga! Vel, expedita labore perspiciatis veritatis accusantium explicabo unde voluptatum eos?</p>
+</section>
+<section class="appointment">
+        <h2>Book an Appointment</h2>
+        <img src="{% static 'images/appointment.jpg' %}" alt="Appointment">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aspernatur, at fugit corrupti ducimus autem excepturi cum asperiores animi facilis optio, provident voluptate voluptatem a molestias in ipsa laboriosam. Laborum blanditiis fuga numquam ut illo perspiciatis rerum provident! Delectus, fuga! Vel, expedita labore perspiciatis veritatis accusantium explicabo unde voluptatum eos?</p>
+</section>
+<section class="timing">
+        <h2>Opening Hours</h2>
+        <img src="{% static 'images/Closed.jpeg' %}" alt="Sorry, we are closed">
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur corrupti culpa incidunt neque veritatis omnis autem repellat nisi tenetur ex.</p>
+        <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+        <p>Saturday: 10:00 AM - 6:00 PM</p>
+        <p>Sunday: Closed</p>
+</section>
+{% endblock %}

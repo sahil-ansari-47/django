@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Services{% endblock %}
+{% block content %}
+<section class="services">
+    <div class="service">
+        <span>
+            <a href="{% url 'my_app:home' %}">Home</a>/
+            <a href="{% url 'my_app:services' %}">Services</a>/
+            <a href="{% url 'my_app:service_detail' service.pk %}">{{service.name}}</a>
+        </span>
+        <img src="{% static 'images/' %}{{ service.name }}.jpg" alt="Services" class="services-image">
+        <div class="service-details">
+            <h1>{{service.name}}</h1><br>
+            <p>{{service.description}}</p><br>
+            <p>Price: ${{service.price}}</p><br>
+            <a href="{% url 'my_app:booking' %}"><button class="btn">Book A Visit</button></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
